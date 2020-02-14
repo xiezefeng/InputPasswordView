@@ -6,7 +6,7 @@
 //  Copyright © 2018年 chaos technology. All rights reserved.
 //
 #import "InputPasswordView.h"
-//#import <Masonry/Masonry.h>
+#import <Masonry/Masonry.h>
 #define RGBA(r, g, b, a) [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a]
 #define RGB(r, g, b) RGBA(r, g, b, 1.0f)
 
@@ -145,70 +145,70 @@
 - (void)updateConstraints {
     [super updateConstraints];
     __weak __typeof(self) weakSelf = self;
-//    [self.inputPasswordClickAction mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.mas_equalTo(weakSelf).mas_offset(0);
-//    }];
-//
-//    for (int i = 0; i < 6; i++) {
-//        UIView *unit = self.allUnitArray[i];
-//        [unit mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            float border = 0;
-//            if (weakSelf.passwordUnitStyle == PasswordUnitStypeFrameClearance) {
-//                border = 10;
-//            }
-//            make.width.equalTo(weakSelf.mas_width).multipliedBy(1 / 6.0).offset(-border);
-//            make.top.equalTo(weakSelf);
-//            make.height.mas_equalTo(unit.mas_width);
-//            if (i == 0) {
-//                make.left.mas_equalTo(border / 2);
-//            } else {
-//                UIView *unit = self.allUnitArray[i - 1];
-//                make.left.equalTo(unit.mas_right).offset(border);
-//            }
-//
-//            UILabel *unit_LB = [self viewWithTag:i + 1];
-//            [unit_LB mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                make.center.equalTo(unit);
-//            }];
-//            switch (self.passwordUnitStyle) {
-//                case PasswordUnitStypeFrame:
-//                    unit.backgroundColor = [InputPasswordView colorWithHexString:@"#F9F9F9"];
-//                    self.layer.masksToBounds = YES;
-//                    self.layer.borderWidth = 1;
-//                    self.layer.borderColor = RGB(219, 219, 219).CGColor;
-//                    self.layer.cornerRadius = 5;
-//                    unit.layer.borderWidth = 0.5;
-//                    unit.layer.borderColor = RGB(219, 219, 219).CGColor;
-//                    unit_LB.font = [UIFont systemFontOfSize:15];
-//
-//                    break;
-//                case PasswordUnitStypeBottomLine: {
-//                    int border = 5;
-//                    UIView *line = [[UIView alloc] init];
-//                    [unit addSubview:line];
-//                    [line mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                        make.left.mas_equalTo(border);
-//                        make.right.mas_equalTo(-border);
-//                        make.bottom.mas_equalTo(-3);
-//                        make.height.mas_equalTo(3);
-//                    }];
-//                    line.backgroundColor = [InputPasswordView colorWithHexString:@"#222847"];
-//                } break;
-//                case PasswordUnitStypeFrameClearance: {
-//                    unit.backgroundColor = [InputPasswordView colorWithHexString:@"#F9F9F9"];
-//                    unit.layer.masksToBounds = YES;
-//                    unit.layer.borderWidth = 1;
-//                    unit.layer.borderColor = RGB(219, 219, 219).CGColor;
-//                    unit.layer.cornerRadius = 5;
-//
-//                    break;
-//                }
-//
-//                default:
-//                    break;
-//            }
-//        }];
-//    }
+    [self.inputPasswordClickAction mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(weakSelf).mas_offset(0);
+    }];
+
+    for (int i = 0; i < 6; i++) {
+        UIView *unit = self.allUnitArray[i];
+        [unit mas_remakeConstraints:^(MASConstraintMaker *make) {
+            float border = 0;
+            if (weakSelf.passwordUnitStyle == PasswordUnitStypeFrameClearance) {
+                border = 10;
+            }
+            make.width.equalTo(weakSelf.mas_width).multipliedBy(1 / 6.0).offset(-border);
+            make.top.equalTo(weakSelf);
+            make.height.mas_equalTo(unit.mas_width);
+            if (i == 0) {
+                make.left.mas_equalTo(border / 2);
+            } else {
+                UIView *unit = self.allUnitArray[i - 1];
+                make.left.equalTo(unit.mas_right).offset(border);
+            }
+
+            UILabel *unit_LB = [self viewWithTag:i + 1];
+            [unit_LB mas_remakeConstraints:^(MASConstraintMaker *make) {
+                make.center.equalTo(unit);
+            }];
+            switch (self.passwordUnitStyle) {
+                case PasswordUnitStypeFrame:
+                    unit.backgroundColor = [InputPasswordView colorWithHexString:@"#F9F9F9"];
+                    self.layer.masksToBounds = YES;
+                    self.layer.borderWidth = 1;
+                    self.layer.borderColor = RGB(219, 219, 219).CGColor;
+                    self.layer.cornerRadius = 5;
+                    unit.layer.borderWidth = 0.5;
+                    unit.layer.borderColor = RGB(219, 219, 219).CGColor;
+                    unit_LB.font = [UIFont systemFontOfSize:15];
+
+                    break;
+                case PasswordUnitStypeBottomLine: {
+                    int border = 5;
+                    UIView *line = [[UIView alloc] init];
+                    [unit addSubview:line];
+                    [line mas_remakeConstraints:^(MASConstraintMaker *make) {
+                        make.left.mas_equalTo(border);
+                        make.right.mas_equalTo(-border);
+                        make.bottom.mas_equalTo(-3);
+                        make.height.mas_equalTo(3);
+                    }];
+                    line.backgroundColor = [InputPasswordView colorWithHexString:@"#222847"];
+                } break;
+                case PasswordUnitStypeFrameClearance: {
+                    unit.backgroundColor = [InputPasswordView colorWithHexString:@"#F9F9F9"];
+                    unit.layer.masksToBounds = YES;
+                    unit.layer.borderWidth = 1;
+                    unit.layer.borderColor = RGB(219, 219, 219).CGColor;
+                    unit.layer.cornerRadius = 5;
+
+                    break;
+                }
+
+                default:
+                    break;
+            }
+        }];
+    }
 }
 
 - (void)deleteNumber {
