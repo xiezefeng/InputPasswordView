@@ -89,7 +89,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "PasswordEntryControl", "InputPasswordView/*.{h,m}"
+  spec.source_files  = "InputPasswordView", "InputPasswordView/*.{h,m}"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -134,3 +134,25 @@ Pod::Spec.new do |spec|
    spec.dependency "Masonry", "~> 1.1.0"
 
 end
+
+
+# Pod::Spec.new do |s|
+#   s.name             = 'InputPasswordView'
+#   s.version          = '0.0.1'
+#   s.summary          = 'An iOS layout framework based on Frame layout. The way using it is like Masonry. CALayer and UIView are both supported. '
+#   s.description      = <<-DESC
+# An iOS layout framework based on Frame layout. The way using it is like Masonry. CALayer and UIView are both supported. 
+#                         DESC
+
+#   s.homepage         = 'https://github.com/xiezefeng/InputPasswordView'
+#   s.license          = { :type => 'MIT', :file => 'LICENSE' }
+#   s.author           = { 'wangwanjie' => 'wangwanjie1993@gmail.com' }
+#   s.source       = { :git => "https://github.com/xiezefeng/InputPasswordView.git", :tag => s.version.to_s }
+#   s.ios.deployment_target = '6.0'
+#   s.source_files = 'InputPasswordView/**/*.{h,m}'
+#   s.source_files  = "InputPasswordView", "InputPasswordView/**/*.{h,m}"
+#   s.public_header_files = 'InputPasswordView/**/*.h'
+#   s.frameworks = 'UIKit', 'Foundation'
+#   s.requires_arc = true
+#   s.dependency "Masonry"
+# end
