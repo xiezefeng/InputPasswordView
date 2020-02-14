@@ -16,7 +16,7 @@
 		065C278E23F672ED00578994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C278D23F672ED00578994 /* main.m */; };
 		065C279823F672EE00578994 /* PasswordEntryControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C279723F672EE00578994 /* PasswordEntryControlTests.m */; };
 		065C27A323F672EE00578994 /* PasswordEntryControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C27A223F672EE00578994 /* PasswordEntryControlUITests.m */; };
-		065C27B623F676AC00578994 /* InputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C27B523F676AC00578994 /* InputPasswordView.m */; };
+		065C27D023F67D8700578994 /* InputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 065C27CF23F67D8700578994 /* InputPasswordView.m */; };
 		88A35ABA32F4F475020269DA /* Pods_PasswordEntryControlTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ED4017D5BCE7AE13F1911BD /* Pods_PasswordEntryControlTests.framework */; };
 		D52A92C4D4F1ACED8312C27F /* Pods_PasswordEntryControl_PasswordEntryControlUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C54C74B2D9DDC47B6E5E4095 /* Pods_PasswordEntryControl_PasswordEntryControlUITests.framework */; };
 		E1F057DF00B8A493262AD001 /* Pods_PasswordEntryControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B70C9AF89283810A7F9C4F9 /* Pods_PasswordEntryControl.framework */; };
@@ -58,8 +58,8 @@
 		065C279E23F672EE00578994 /* PasswordEntryControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordEntryControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		065C27A223F672EE00578994 /* PasswordEntryControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordEntryControlUITests.m; sourceTree = "<group>"; };
 		065C27A423F672EE00578994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		065C27B423F676AC00578994 /* InputPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPasswordView.h; sourceTree = "<group>"; };
-		065C27B523F676AC00578994 /* InputPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPasswordView.m; sourceTree = "<group>"; };
+		065C27CE23F67D8700578994 /* InputPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPasswordView.h; sourceTree = "<group>"; };
+		065C27CF23F67D8700578994 /* InputPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputPasswordView.m; sourceTree = "<group>"; };
 		0943B1F6F6B33E066AF7745F /* Pods-PasswordEntryControl-PasswordEntryControlUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordEntryControl-PasswordEntryControlUITests.release.xcconfig"; path = "Target Support Files/Pods-PasswordEntryControl-PasswordEntryControlUITests/Pods-PasswordEntryControl-PasswordEntryControlUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0D7395A904C5EE120A63EB4D /* Pods-PasswordEntryControl-PasswordEntryControlUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordEntryControl-PasswordEntryControlUITests.debug.xcconfig"; path = "Target Support Files/Pods-PasswordEntryControl-PasswordEntryControlUITests/Pods-PasswordEntryControl-PasswordEntryControlUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C10283BD0C2414E288AB176 /* Pods-PasswordEntryControlTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PasswordEntryControlTests.debug.xcconfig"; path = "Target Support Files/Pods-PasswordEntryControlTests/Pods-PasswordEntryControlTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 		065C277A23F672EA00578994 /* PasswordEntryControl */ = {
 			isa = PBXGroup;
 			children = (
-				065C27B323F676AC00578994 /* InputPasswordView */,
+				065C27CD23F67D8700578994 /* InputPasswordView */,
 				065C277B23F672EA00578994 /* AppDelegate.h */,
 				065C277C23F672EA00578994 /* AppDelegate.m */,
 				065C277E23F672EA00578994 /* SceneDelegate.h */,
@@ -158,13 +158,14 @@
 			path = PasswordEntryControlUITests;
 			sourceTree = "<group>";
 		};
-		065C27B323F676AC00578994 /* InputPasswordView */ = {
+		065C27CD23F67D8700578994 /* InputPasswordView */ = {
 			isa = PBXGroup;
 			children = (
-				065C27B423F676AC00578994 /* InputPasswordView.h */,
-				065C27B523F676AC00578994 /* InputPasswordView.m */,
+				065C27CE23F67D8700578994 /* InputPasswordView.h */,
+				065C27CF23F67D8700578994 /* InputPasswordView.m */,
 			);
-			path = InputPasswordView;
+			name = InputPasswordView;
+			path = ../../InputPasswordView;
 			sourceTree = "<group>";
 		};
 		27282665A2B07E1B62DF57BA /* Frameworks */ = {
@@ -431,7 +432,7 @@
 				065C278323F672EA00578994 /* ViewController.m in Sources */,
 				065C277D23F672EA00578994 /* AppDelegate.m in Sources */,
 				065C278E23F672ED00578994 /* main.m in Sources */,
-				065C27B623F676AC00578994 /* InputPasswordView.m in Sources */,
+				065C27D023F67D8700578994 /* InputPasswordView.m in Sources */,
 				065C278023F672EA00578994 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
