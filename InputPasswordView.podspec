@@ -82,7 +82,7 @@ Pod::Spec.new do |spec|
 
 
 
-  spec.source_files  = "InputPassword/*.{h,m}"
+  spec.source_files  = "InputPassword"
  
    spec.dependency "Masonry", "~> 1.1.0"
 
